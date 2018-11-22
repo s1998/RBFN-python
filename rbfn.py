@@ -124,36 +124,3 @@ for batch_no in range(2000):
 		y_predict = model2.predict(batch)
 		acc_now = accuracy(mnist.test.labels, y_predict)
 		print("accuracy", acc_now)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
