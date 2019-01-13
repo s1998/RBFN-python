@@ -36,9 +36,9 @@ Here all the algorithms yield a similar result. However, the accuracy of using a
 
 All the files are present in *src* directory.
 
-1. **rbfn.py : ** contains implementation of Radial Basis Function Network and the implementation of trainer.
-2. **clustering.py, clustering_hd.py, clustering_spectral.py : ** are used for clustering points with different algorithms.
-3. **compare_clustering_algos.py, compare_variable_centres.py  : ** are used for comparing different versions of RBFN.
+1. **rbfn.py** contains implementation of Radial Basis Function Network and the implementation of trainer.
+2. **clustering.py, clustering_hd.py, clustering_spectral.py** are used for clustering points with different algorithms.
+3. **compare_clustering_algos.py, compare_variable_centres.py** are used for comparing different versions of RBFN.
 
 ## Future work 
 - [ ] Implement alternative kernels: fractional norms.
