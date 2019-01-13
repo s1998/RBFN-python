@@ -22,6 +22,6 @@ Comparing the effect of variable and fixed cluster centers.
 
 For both the cases, the same set of points are used as cluster centers initially but in variable cluster centers the backpropagated error changes the cluster center.
 
-![Accuracy_for_variable_cluster_centers](./images/Accuracy_for_variable_cluster_centers.png)
+![Accuracy_for_variable_cluster_centers](./images/Accuracy_for_variable_cluster_centres.png)
 
 Variable cluster center significantly outperforms fixed cluster center based RBFNs.
