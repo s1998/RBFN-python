@@ -5,7 +5,6 @@ from tensorflow.examples.tutorials.mnist import input_data
 import os
 mnist = input_data.read_data_sets(os.path.join('..', 'MNIST_data'), one_hot=True)
 
-
 # __init__ function will make the computation graph
 # a separate function will be used for training 
 # a separate function will be used for testing

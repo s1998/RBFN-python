@@ -15,24 +15,24 @@ print(cluster_centres_count)
 output = {}
 
 # initializing rbfn model
-model1 = rbfn_model_tf(784, 10, cluster_centres_count, centroids_km[:cluster_centres_count, :])
+model1 = rbfn_model_tf(784, 10, cluster_centres_count, centroids_km[:cluster_centres_count, :], True)
 print("\n\nInitialized the model with k means centres \n\n\n\n")
 accs, loss = model_trainer(model1, "k means cluster centres")
 output["k means cluster centres"] = (accs, loss)
 tf.reset_default_graph()
 
-model2 = rbfn_model_tf(784, 10, cluster_centres_count, centroids_sc[:cluster_centres_count, :])
+model2 = rbfn_model_tf(784, 10, cluster_centres_count, centroids_sc[:cluster_centres_count, :], True)
 print("\n\nInitialized the model with spectral clustering centres \n\n\n\n")
 accs, loss = model_trainer(model2, "spectral clustering cluster centres")
 output["spectral clustering cluster centres"] = (accs, loss)
 tf.reset_default_graph()
 
-model3 = rbfn_model_tf(784, 10, cluster_centres_count, centroids_hd[:cluster_centres_count, :])
+model3 = rbfn_model_tf(784, 10, cluster_centres_count, centroids_hd[:cluster_centres_count, :], True)
 print("\n\nInitialized the model with HDBSCAN centres \n\n\n\n")
 accs, loss = model_trainer(model3, "HDBSCAN cluster centres")
 output["HDBSCAN cluster centres"] = (accs, loss)
 tf.reset_default_graph()
 
 import pickle
-with open(os.path.join("..", "output_data", "compare_cluster_algos.pkl"), "wb") as f:
+with open(os.path.join("..", "output_data", "compare_cluster_algos_2.pkl"), "wb") as f:
   pickle.dump(output, f)
