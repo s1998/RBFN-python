@@ -26,13 +26,19 @@ For both the cases, the same set of points are used as cluster centers initially
 
 Variable cluster center significantly outperforms fixed cluster center based RBFNs.
 
+## Effects of clustering algorithms with variable cluster centres
+
+Here all the algorithms yield a similar result. However, the accuracy of using a clustering algorithm with variable cluster centre is almost as good as using random points with variable cluster center and hence a clustering step to get better cluster centers is not needed. 
+
+![Accuracy_for__diif_alogs_variable_cluster_centers](./images/Accuracy_for_different_clustering_algorithms_2.png)
+
 ## File structure
 
 All the files are present in *src* directory.
 
-1. **rbfn.py** contains implementation of Radial Basis Function Network and the implementation of trainer.
-2. **clustering.py, clustering_hd.py, clustering_spectral.py** are used for clustering points with different algorithms.
-3. **compare_clustering_algos.py compare_variable_centres.py** are used for comparing different versions of RBFN.
+1. **rbfn.py : ** contains implementation of Radial Basis Function Network and the implementation of trainer.
+2. **clustering.py, clustering_hd.py, clustering_spectral.py : ** are used for clustering points with different algorithms.
+3. **compare_clustering_algos.py, compare_variable_centres.py  : ** are used for comparing different versions of RBFN.
 
 ## Future work 
 - [ ] Implement alternative kernels: fractional norms.
