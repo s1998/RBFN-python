@@ -1,11 +1,27 @@
 # RBFN
 
-Implementation of radial basis function networks using tensorflow.
+The aim of this project is to do comparative analysis of RBFNs (Radial Basis Function Networks).
+Considering two cases : variable cluster centers and different clustering algorithms.
 
-Use ```python rbfn.py``` to run the code.
+## Effects of clustering algorithms
 
+Comparing three different clustering algorithms for the cluster center finding stage :
+- K means 
+- Spectral clustering
+- HDBSCAN
 
+For each of the algorithm, we try to keep 100 cluster centres.
+The best accuracy is obtained by the K Means algorithm. 
 
-```Accuracy for rbfn with variable cluster centres (allow backpropagating error to cluster centres) : 0.9334```
+./images/Accuracy_for_different_clustering_algorithms.png
 
-```Accuracy for rbfn without variable cluster centres (stop backpropagating error to cluster centres) : 0.8809```
+## Effects of variable cluster centres
+
+Comparing the effect of variable and fixed cluster centers. 
+100 points are randomly selected as the clustr center.
+
+For both the cases, the same set of points are used as cluster centers initially but in variable cluster centers the backpropagated error changes the cluster center.
+
+./images/Accuracy_for_variable_cluster_centers.png
+
+Variable cluster center significantly outperforms fixed cluster center based RBFNs.
